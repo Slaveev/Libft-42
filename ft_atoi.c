@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 	int	result;
 
 	i = 0;
-	sign = -1;
+	sign = 1;
 	result = 0;
 	while (ft_isspace(str[i]))
 		i++;
