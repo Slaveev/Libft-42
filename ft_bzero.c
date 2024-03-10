@@ -6,12 +6,15 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:40:10 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/05 10:53:22 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:41:15 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* @brief Fills string with zeros
+*  @params void *dst size_t n
+*/
 void	ft_bzero(void *dst, size_t n)
 {
 	ft_memset(dst, 0, n);
