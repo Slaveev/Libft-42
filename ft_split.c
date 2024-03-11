@@ -6,12 +6,16 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 11:18:04 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/06 17:00:25 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:15:44 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief count how many total words are in a string
+/// @param s
+/// @param c
+/// @return counted words
 static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
@@ -33,6 +37,10 @@ static size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+/// @brief gets each length of a word in the string
+/// @param str
+/// @param c
+/// @return length of each word
 static size_t	get_word_len(char const *str, char c)
 {
 	size_t	i;
@@ -43,6 +51,9 @@ static size_t	get_word_len(char const *str, char c)
 	return (i);
 }
 
+/// @brief frees the inside of the array and the whole array
+/// @param i
+/// @param array
 static void	free_array(size_t i, char **array)
 {
 	while (i > 0)
@@ -53,6 +64,12 @@ static void	free_array(size_t i, char **array)
 	free(array);
 }
 
+/// @brief creates the new array with substr and then it frees it
+/// @param s
+/// @param c
+/// @param array
+/// @param words_count
+/// @return new array
 static char	**split(char const *s, char c, char **array, size_t words_count)
 {
 	size_t	i;
@@ -78,6 +95,10 @@ static char	**split(char const *s, char c, char **array, size_t words_count)
 	return (array);
 }
 
+/// @brief splits string into an array of substrings based on delimeter
+/// @param s
+/// @param c
+/// @return sub array
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
