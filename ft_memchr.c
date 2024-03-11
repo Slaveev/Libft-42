@@ -6,19 +6,24 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 18:41:53 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/05 19:04:15 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 15:57:07 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *c, int s, size_t n)
+/// @brief finds the first occurance in a string of memory bytes
+/// @param s
+/// @param c
+/// @param n
+/// @return returns a pointer to the byte located
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*str;
 	unsigned char		uc;
-	size_t			i;
+	size_t				i;
 
-	str = (unsigned char *) c;
+	str = (unsigned char *) s;
 	uc = c;
 	i = 0;
 	if (n == 0)
