@@ -6,19 +6,22 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 19:40:00 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/05 21:43:58 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:19:03 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief allocates memory to copy a string
+/// @param src
+/// @return pointer to the coppied string
 char	*ft_strdup(const char *src)
 {
 	char	*dub_ptr;
 	char	*ptr;
 	int		src_size;
 
-	src_size = ft_strlen(src);
+	src_size = (int)(ft_strlen(src));
 	ptr = (char *)malloc(sizeof(char) * (src_size + 1));
 	if (!ptr)
 		return (NULL);
