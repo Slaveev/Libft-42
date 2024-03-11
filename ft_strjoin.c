@@ -6,13 +6,17 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 21:41:12 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/06 10:42:26 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:21:17 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
+/// @brief joins string to at the end of string 1
+/// @param s1
+/// @param s2
+/// @return a pointer of the joined strings
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		size;
