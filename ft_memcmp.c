@@ -6,16 +6,21 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 18:04:18 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/05 18:33:01 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:06:01 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief compare bytes from str1
+/// @param str1
+/// @param str2
+/// @param n
+/// @return 0 if their indentical otherwise the difference between them
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	unsigned char	*s1;
-	unsigned char	*s2;
+	const unsigned char	*s1;
+	const unsigned char	*s2;
 
 	s1 = str1;
 	s2 = str2;
