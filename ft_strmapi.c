@@ -6,12 +6,16 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 10:39:45 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/07 15:57:23 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:31:03 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief applies function to each character creating new one
+/// @param s
+/// @param f
+/// @return a new allocated string
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
