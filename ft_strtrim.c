@@ -6,12 +6,15 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 10:45:18 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/08 15:36:56 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:35:41 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief checks whether the index of string matches character c
+/// @param str
+/// @param c
 static size_t	check_set(char const *str, char const c)
 {
 	int	i;
@@ -26,6 +29,11 @@ static size_t	check_set(char const *str, char const c)
 	return (0);
 }
 
+/// @brief allocates memory for a new string
+/// @param s1
+/// @param start
+/// @param len
+/// @return a pointer to the new string
 static char	*create_new(const char *s1, size_t start, size_t len)
 {
 	char	*str;
@@ -45,6 +53,10 @@ static char	*create_new(const char *s1, size_t start, size_t len)
 	return (str);
 }
 
+/// @brief trims the string from set characters
+/// @param s1
+/// @param set
+/// @return returns the trimmed string
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
