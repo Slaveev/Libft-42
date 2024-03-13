@@ -6,21 +6,26 @@
 /*   By: dslaveev <dslaveev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 09:55:51 by dslaveev          #+#    #+#             */
-/*   Updated: 2024/03/05 10:10:47 by dslaveev         ###   ########.fr       */
+/*   Updated: 2024/03/09 16:33:10 by dslaveev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *haystack, const char *needle, int len)
+/// @brief searches for a substring in a string with specified length
+/// @param haystack
+/// @param needle
+/// @param len
+/// @return substring if found if not NULL
+char	*ft_strnstr(char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (!needle[i])
 		return ((char *)haystack);
-	while (haystack[i])
+	while (haystack[i] && i < len)
 	{
 		j = 0;
 		while (ft_strncmp(&haystack[i + j], &needle[j], 1) == 0
@@ -34,5 +39,5 @@ char	*ft_strnstr(char *haystack, const char *needle, int len)
 			return ((char *)haystack + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
